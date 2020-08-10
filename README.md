@@ -4,9 +4,11 @@
 
 
 
+
 # 추진 배경
 
 회사에서 주로 게시판 페이징을 컨버팅 작업 중. 따라서 업무에 익숙해지고자 해당 프로젝트를 진행하고자 한다.
+
 
 
 
@@ -17,6 +19,7 @@
 3. rails routes 지정
 4. rails jbuilder
 5. athentication - jwt, device gem
+
 
 
 # 개발 환경
