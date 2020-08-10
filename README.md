@@ -19,7 +19,8 @@
 3. rails routes 지정
 4. rails jbuilder
 5. athentication - jwt, device gem
-
+6. respec 테스트
+7. .http 작성
 
 
 # 개발 환경
