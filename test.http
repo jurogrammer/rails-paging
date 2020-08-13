@@ -7,3 +7,8 @@ Accept: application/json
 GET http://localhost:3000/customers/103
 Accept: application/json
 ###
+
+### orderdetails 받기
+GET http://localhost:3000/orders/10100/orderdetails
+Accept: application/json
+### 
