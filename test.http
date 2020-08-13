@@ -1,2 +1,9 @@
+### order lists 받기
 GET http://localhost:3000/orders
 Accept: application/json
+###
+
+### customer 정보 받기
+GET http://localhost:3000/customers/103
+Accept: application/json
+###
