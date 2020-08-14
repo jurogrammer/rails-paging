@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     member do
       get 'orderdetails'
     end
+    resource :comment
   end
+
   resources :customers
 end
