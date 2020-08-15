@@ -1,0 +1,53 @@
+<% # 추후 partials로 분리할 것 %>
+<div id="orderdetail" class="modal">
+  <p>orderdetail modal</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
+
+<div id="customerNumber" class="modal">
+  <p>customerNumber modal</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
+
+<% #table 만들기 %>
+<table id="orders" class="orders table">
+  <thead>
+    <tr>
+      <th>orderdetail</th>
+      <th>orderDate</th>
+      <th>requiredDate</th>
+      <th>shippedDate</th>
+      <th>status</th>
+      <th>comments</th>
+      <th>customerNumber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="#orderdetail" rel="modal:open">10100</a>
+      </td>
+      <td>2003-01-06</td>
+      <td>2003-01-13</td>
+      <td>2003-01-10</td>
+      <td>Shipped</td>
+      <td>my name Is...hohohoho</td>
+      <td>
+        <a href="#customerNumber" rel="modal:open">363</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#orderdetail" rel="modal:open">10101</a>
+      </td>
+      <td>2003-01-09</td>
+      <td>2003-01-18</td>
+      <td>2003-01-11</td>
+      <td>Shipped</td>
+      <td>Check on availability.</td>
+      <td>
+        <a href="#customerNumber" rel="modal:open">128</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
