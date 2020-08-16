@@ -18,7 +18,6 @@ var ordersTable = $('#orders').DataTable( {
     dataSrc: res => {
       recordsTotal = res.recordsTotal
       recordsFilterd = res.recordsFiltered
-      console.log(res)
       return res.data
     }
   },
