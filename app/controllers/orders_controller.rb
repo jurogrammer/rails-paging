@@ -11,14 +11,12 @@ class OrdersController < ApplicationController
 
         page_number = params[:start].to_i/params[:length].to_i + 1
         @orders = @orders.page(page_number).per(params[:length].to_i)
-        
-        
       end
     end
   end
 
   def orderdetails
-    @orderdetails = Order.find(params[:id])
+    @orderdetails = Order.find(params[:id]).orderdetails
     @orderdetails = @orderdetails.includes(:product)
     
     respond_to do |format|
