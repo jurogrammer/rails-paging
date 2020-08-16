@@ -18,7 +18,9 @@ class OrdersController < ApplicationController
   end
 
   def orderdetails
-    @orderdetails = Order.find(params[:id]).orderdetails
+    @orderdetails = Order.find(params[:id])
+    @orderdetails = @orderdetails.includes(:product)
+    
     respond_to do |format|
       format.html
       format.json
