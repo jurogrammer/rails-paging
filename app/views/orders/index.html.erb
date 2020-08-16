@@ -1,19 +1,32 @@
-<% # 추후 partials로 분리할 것 %>
 <div id="orderdetail" class="modal">
   <p>orderdetail modal</p>
   <a href="#" rel="modal:close">Close</a>
 </div>
 
-<div id="customerNumber" class="modal">
-  <p>customerNumber modal</p>
+<div id="customer" class="modal">
+  <p>customer modal</p>
   <a href="#" rel="modal:close">Close</a>
+</div>
+
+<div class="search">
+  <%= select_tag :condition, options_for_select(
+  [
+    ["주문번호", "orderNumber"],
+    ["배송상태", "status"],
+    
+  ], "orderNumber"), class: 'condition' %>
+  <%= text_field_tag :q, nil, placeholder: '검색어를 입력해주세요.', class: 'form-control search-box' %>
+  <span class="input-group-append">
+    <%= button_tag class: 'search-btn' do -%>
+      <i class="fa fa-search"></i> 검색
+    <% end %>
 </div>
 
 <% #table 만들기 %>
 <table id="orders" class="orders table">
   <thead>
     <tr>
-      <th>orderdetail</th>
+      <th>orderNumber</th>
       <th>orderDate</th>
       <th>requiredDate</th>
       <th>shippedDate</th>
@@ -33,7 +46,7 @@
       <td>Shipped</td>
       <td>my name Is...hohohoho</td>
       <td>
-        <a href="#customerNumber" rel="modal:open">363</a>
+        <a href="#customer" rel="modal:open">363</a>
       </td>
     </tr>
     <tr>
@@ -46,8 +59,15 @@
       <td>Shipped</td>
       <td>Check on availability.</td>
       <td>
-        <a href="#customerNumber" rel="modal:open">128</a>
+        <a href="#customer" rel="modal:open">128</a>
       </td>
     </tr>
   </tbody>
 </table>
+
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    <%= render 'index.js' %>
+    <%= render 'modals.js'%>
+  </script>
+<% end %>
