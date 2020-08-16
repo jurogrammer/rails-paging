@@ -1,21 +1,28 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.all
-
     respond_to do |format|
       format.html
-      format.json
+      format.json do
+        @orders = Order.search_by_condition(params[:condition], params[:q])
+        
+        page_info = get_page_info(@orders)
+        @recordsTotal = page_info[:recordsTotal]
+        @recordsFiltered = page_info[:recordsFiltered]
+
+        page_number = params[:start].to_i/params[:length].to_i + 1
+        @orders = @orders.page(page_number).per(params[:length].to_i)
+        
+        
+      end
     end
   end
 
   def orderdetails
-    @orderdetails = Order.find(params[:id]).orderdetails    
-    #test
-    params = {id: 10100}
-    @orderdetails = Order.find(params[:id]).orderdetails.includes(:product)
+    @orderdetails = Order.find(params[:id])
+    @orderdetails = @orderdetails.includes(:product)
     
     respond_to do |format|
-      format.html {  }
+      format.html
       format.json
     end
   end
