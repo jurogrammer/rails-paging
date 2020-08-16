@@ -1,0 +1,24 @@
+### order lists 받기
+GET http://localhost:3000/orders
+Accept: application/json
+###
+
+### customer 정보 받기
+GET http://localhost:3000/customers/103
+Accept: application/json
+###
+
+### orderdetails 받기
+GET http://localhost:3000/orders/10100/orderdetails
+Accept: application/json
+### 
+
+### comment 수정
+PUT http://localhost:3000/orders/10100/comment
+Accept: application/json
+Content-Type: application/json
+
+{
+  "comment": "my name Is...hohohoho"
+}
+###
