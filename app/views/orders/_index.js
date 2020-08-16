@@ -11,11 +11,10 @@ var ordersTable = $('#orders').DataTable( {
   ajax: {
     url: "/orders",
     type: "GET",
-    data: {
-      q: $("#q").val(),
-      condition: $("#condition").val()
+    data: function (d) {
+        d.q = $("#q").val()
+        d.condition = $("#condition").val()
     },
-
     dataSrc: res => {
       recordsTotal = res.recordsTotal
       recordsFilterd = res.recordsFiltered
