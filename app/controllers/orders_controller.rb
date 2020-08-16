@@ -18,7 +18,6 @@ class OrdersController < ApplicationController
   end
 
   def orderdetails
-    @orderdetails = Order.find(params[:id]).orderdetails
     respond_to do |format|
       format.html
       format.json

@@ -14,3 +14,7 @@ function showCustomerInfo(customerNumber) {
     document.querySelector("#country").innerText = data.country
   })
 }
+
+function showOrderdetail(customerNumber) {
+  
+}
