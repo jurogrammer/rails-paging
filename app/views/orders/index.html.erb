@@ -1,0 +1,73 @@
+<div id="orderdetail" class="modal">
+  <p>orderdetail modal</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
+
+<div id="customer" class="modal">
+  <p>customer modal</p>
+  <a href="#" rel="modal:close">Close</a>
+</div>
+
+<div class="search">
+  <%= select_tag :condition, options_for_select(
+  [
+    ["주문번호", "orderNumber"],
+    ["배송상태", "status"],
+    
+  ], "orderNumber"), class: 'condition' %>
+  <%= text_field_tag :q, nil, placeholder: '검색어를 입력해주세요.', class: 'form-control search-box' %>
+  <span class="input-group-append">
+    <%= button_tag class: 'search-btn' do -%>
+      <i class="fa fa-search"></i> 검색
+    <% end %>
+</div>
+
+<% #table 만들기 %>
+<table id="orders" class="orders table">
+  <thead>
+    <tr>
+      <th>orderNumber</th>
+      <th>orderDate</th>
+      <th>requiredDate</th>
+      <th>shippedDate</th>
+      <th>status</th>
+      <th>comments</th>
+      <th>customerNumber</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="#orderdetail" rel="modal:open">10100</a>
+      </td>
+      <td>2003-01-06</td>
+      <td>2003-01-13</td>
+      <td>2003-01-10</td>
+      <td>Shipped</td>
+      <td>my name Is...hohohoho</td>
+      <td>
+        <a href="#customer" rel="modal:open">363</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="#orderdetail" rel="modal:open">10101</a>
+      </td>
+      <td>2003-01-09</td>
+      <td>2003-01-18</td>
+      <td>2003-01-11</td>
+      <td>Shipped</td>
+      <td>Check on availability.</td>
+      <td>
+        <a href="#customer" rel="modal:open">128</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<% content_for :javascript do %>
+  <script type="text/javascript">
+    <%= render 'index.js' %>
+    <%= render 'modals.js'%>
+  </script>
+<% end %>

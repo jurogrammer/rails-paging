@@ -6,4 +6,15 @@ class Order < ApplicationRecord
   def orderdetails
     Orderdetail.where(orderNumber: self.orderNumber)
   end
+
+  scope :search_by_condition, -> (condition, q) {
+    return all if q == ""
+    
+    case condition
+    when "orderNumber"
+      where(orderNumber: q)
+    when "status"
+      where("status LIKE ?", "%" + q + "%")
+    end
+  }
 end
