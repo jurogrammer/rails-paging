@@ -29,7 +29,7 @@ var ordersTable = $('#orders').DataTable( {
     {
       data: "orderNumber",
       render: function (data, type, row) {
-        return "<a href=\"#orderdetail\" rel=\"modal:open\">" + data + "</a>"
+        return "<a href=\"#orderdetail\" rel=\"modal:open\" onclick = showOrderNumber(" + data + ")>" + data + "</a>"
     }},
     {data: "orderDate"},
     {data: "requiredDate"},
@@ -39,7 +39,7 @@ var ordersTable = $('#orders').DataTable( {
     {
       data: "customerNumber",
       render: function (data, type, row) {
-        return "<a href=\"#customer\" rel=\"modal:open\">" + data + "</a>"
+        return "<a href=\"#customer\" rel=\"modal:open\" onclick = showCustomerInfo(" + data + ")>" + data + "</a>"
       }
     }
   ]
