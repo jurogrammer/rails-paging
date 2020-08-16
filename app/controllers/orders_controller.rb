@@ -10,9 +10,13 @@ class OrdersController < ApplicationController
 
   def orderdetails
     @orderdetails = Order.find(params[:id]).orderdetails    
+    #test
+    params = {id: 10100}
+    @orderdetails = Order.find(params[:id]).orderdetails.includes(:product)
+    
     respond_to do |format|
       format.html {  }
-      format.json { render json: @orderdetails}
+      format.json
     end
   end
 end
