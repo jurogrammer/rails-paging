@@ -6,7 +6,7 @@
  * dataSrc: 콜백함수를 등록하여 Response가 왔을 때 데이터 전처리 후 return으로 데이터를 넣어준다. 즉, 테이블에 보낼 데이터! {data: [{},{}]}가 아닌 실제 데이터 리스트를 보내줘야 함. [{},{}]
  */
 
-var ordersTable = $('#orders').DataTable( {
+var ordersTable = $('#orders').DataTable({
   serverSide: true,
   ajax: {
     url: "/orders",
