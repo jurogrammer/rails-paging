@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :customers
+
+  get 'boot' => 'boot#index'
 end

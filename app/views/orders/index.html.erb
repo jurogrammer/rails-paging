@@ -1,149 +1,144 @@
-<div id="orderdetailModal" class="modal">
-  <table id="orderdetailTable" class="table orderdetail">
-    <thead>
-      <tr>
-        <th>productName</th>
-        <th>productLine</th>
-        <th>productScale</th>
-        <th>productVender</th>
-        <th>quantityOrdered</th>
-        <th>priceEach</th>
-        <th>orderLineNumber</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1917 Grand Touring Sedan</td>
-        <td>Vintage Cars</td>
-        <td>1:18</td>
-        <td>Welly Diecast Productions</td>
-        <td>22</td>
-        <td>0.7546e2</td>
-        <td>3</td>
-      </tr>
-    </tbody>
-  </table>
-  <a href="#" rel="modal:close">Close</a>
+<div class="modal fade" id="orderdetailModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table id="orderdetailTable" class="table orderdetail">
+          <thead>
+          <tr>
+            <th>productName</th>
+            <th>productLine</th>
+            <th>productScale</th>
+            <th>productVender</th>
+            <th>quantityOrdered</th>
+            <th>priceEach</th>
+            <th>orderLineNumber</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>1917 Grand Touring Sedan</td>
+            <td>Vintage Cars</td>
+            <td>1:18</td>
+            <td>Welly Diecast Productions</td>
+            <td>22</td>
+            <td>0.7546e2</td>
+            <td>3</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div id="customerInfoModal" class="modal">
-  <table>
-    <thead>
-      <tr>
-        <th>
-          정보
-        </th>
-        <th>
-          값
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>customerName</td>
-        <td class = "table customerModal" id = "customerName">Atelier graphique</td>
-      </tr>
-      <tr>
-        <td>contactLastName</td>
-        <td class = "table contactLastName" id = "contactLastName" >Schmitt</td>
-      </tr>
-      <tr>
-        <td>contactFirstName</td>
-        <td class = "table contactFirstName" id = "contactFirstName">Carine</td>
-      </tr>
-      <tr>
-        <td>phone</td>
-        <td class = "table phone" id = "phone">40.32.2555</td>
-      </tr>
-      <tr>
-        <td>addressLine1</td>
-        <td class = "table addressLine1" id = "addressLine1">54, rue Royale</td>
-      </tr>
-      <tr>
-        <td class = "table addressLine2" id = "addressLine2">addressLine2</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>city</td>
-        <td class = "table city" id = "city">Nantes</td>
-      </tr>
-      <tr>
-        <td>state</td>
-        <td class = "table state" id = "state"></td>
-      </tr>
-      <tr>
-        <td>postalCode</td>
-        <td class = "table postalCode" id = "postalCode">44000</td>
-      </tr>
-      <tr>
-        <td>country</td>
-        <td class = "table country" id = "country">France</td>
-      </tr>
-    </tbody>
-  </table>
-  <a href="#" rel="modal:close">Close</a>
+<div id="customerInfoModal" class="modal fade" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>customerInfo</h2>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+          <tr>
+            <th>정보</th>
+            <th>값</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>customerName</td>
+            <td class = "table customerModal" id = "customerName">Atelier graphique</td>
+          </tr>
+          <tr>
+            <td>contactLastName</td>
+            <td class = "table contactLastName" id = "contactLastName" >Schmitt</td>
+          </tr>
+          <tr>
+            <td>contactFirstName</td>
+            <td class = "table contactFirstName" id = "contactFirstName">Carine</td>
+          </tr>
+          <tr>
+            <td>phone</td>
+            <td class = "table phone" id = "phone">40.32.2555</td>
+          </tr>
+          <tr>
+            <td>addressLine1</td>
+            <td class = "table addressLine1" id = "addressLine1">54, rue Royale</td>
+          </tr>
+          <tr>
+            <td>addressLine2</td>
+            <td class = "table addressLine2" id = "addressLine2">addressLine2</td>
+          </tr>
+          <tr>
+            <td>city</td>
+            <td class = "table city" id = "city">Nantes</td>
+          </tr>
+          <tr>
+            <td>state</td>
+            <td class = "table state" id = "state"></td>
+          </tr>
+          <tr>
+            <td>postalCode</td>
+            <td class = "table postalCode" id = "postalCode">44000</td>
+          </tr>
+          <tr>
+            <td>country</td>
+            <td class = "table country" id = "country">France</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="search">
   <%= select_tag :condition, options_for_select(
-  [
-    ["주문번호", "orderNumber"],
-    ["배송상태", "status"],
-    
-  ], "orderNumber"), class: 'condition' %>
+      [
+          ["주문번호", "orderNumber"],
+          ["배송상태", "status"],
+
+      ], "orderNumber"), class: 'condition' %>
   <%= text_field_tag :q, nil, placeholder: '검색어를 입력해주세요.', class: 'form-control search-box' %>
   <span class="input-group-append">
     <%= button_tag class: 'search-btn' do -%>
       <i class="fa fa-search"></i> 검색
     <% end %>
+  </span>
 </div>
 
 <% #table 만들기 %>
 <table id="orders" class="orders table">
   <thead>
-    <tr>
-      <th>orderNumber</th>
-      <th>orderDate</th>
-      <th>requiredDate</th>
-      <th>shippedDate</th>
-      <th>status</th>
-      <th>comments</th>
-      <th>customerNumber</th>
-    </tr>
+  <tr>
+    <th>orderNumber</th>
+    <th>orderDate</th>
+    <th>requiredDate</th>
+    <th>shippedDate</th>
+    <th>status</th>
+    <th>comments</th>
+    <th>customerNumber</th>
+  </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>
-        <a href="#orderdetail" rel="modal:open">10100</a>
-      </td>
-      <td>2003-01-06</td>
-      <td>2003-01-13</td>
-      <td>2003-01-10</td>
-      <td>Shipped</td>
-      <td>my name Is...hohohoho</td>
-      <td>
-        <a href="#customer" rel="modal:open">363</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="#orderdetail" rel="modal:open">10101</a>
-      </td>
-      <td>2003-01-09</td>
-      <td>2003-01-18</td>
-      <td>2003-01-11</td>
-      <td>Shipped</td>
-      <td>Check on availability.</td>
-      <td>
-        <a href="#customer" rel="modal:open">128</a>
-      </td>
-    </tr>
-  </tbody>
 </table>
 
 <% content_for :javascript do %>
+
   <script type="text/javascript">
-    <%= render 'index.js' %>
-    <%= render 'modals.js'%>
+      <%= render 'index.js' %>
+      <%= render 'modals.js'%>
   </script>
 <% end %>
